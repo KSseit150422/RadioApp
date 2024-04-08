@@ -6,9 +6,9 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/Radio"
+        android:icon="@drawable/radio"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/Radio"
+        android:roundIcon= "@drawable/radio"
         android:supportsRtl="true"
         android:theme="@style/Theme.RadioApp"
         tools:targetApi="31">
@@ -30,7 +30,6 @@
             android:theme="@style/Theme.RadioApp">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

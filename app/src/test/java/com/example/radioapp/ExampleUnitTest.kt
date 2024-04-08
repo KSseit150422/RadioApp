@@ -9,6 +9,7 @@ import org.robolectric.RobolectricTestRunner
 import org.junit.Assert.assertEquals
 import org.junit.Assert.*
 import android.widget.Button
+import com.IU.radioapp.R
 import android.content.Context
 
 /**
@@ -23,7 +24,7 @@ class ExampleUnitTest {
     }
 }
 
-RunWith(RobolectricTestRunner::class)
+@RunWith(RobolectricTestRunner::class)
 class ExampleUnitTest2 {
 
     @Test
@@ -50,5 +51,5 @@ class ExampleUnitTest2 {
 }
 
 
-}
+
 

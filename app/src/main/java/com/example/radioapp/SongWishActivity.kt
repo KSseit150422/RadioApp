@@ -5,6 +5,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.ComponentActivity
+import com.IU.radioapp.R
 
 class SongWishActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -5,6 +5,8 @@ import android.widget.Button
 import android.widget.RatingBar
 import android.widget.Toast
 import androidx.activity.ComponentActivity
+import com.IU.radioapp.R
+
 
 class RateHostActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,13 +21,5 @@ class RateHostActivity : ComponentActivity() {
             Toast.makeText(this, "Bewertung abgegeben!: $rating", Toast.LENGTH_SHORT).show()
             // Handle the rating as needed
         }
-    }
-}
-import androidx.activity.ComponentActivity
-
-class `RateHostActivity.kt` : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_rate_host)
     }
 }
