@@ -32,6 +32,11 @@ class RatePlaylistActivity : ComponentActivity() {
             // Finish the current activity
             finish()
         }
+
+        val goBackButton = findViewById<Button>(R.id.goBackButton)
+        goBackButton.setOnClickListener {
+            finish()
+        }
     }
 }
 

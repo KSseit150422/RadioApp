@@ -22,8 +22,19 @@ class SongWishActivity : ComponentActivity() {
             val song = songInput.text.toString()
             val artist = artistInput.text.toString()
 
-            Toast.makeText(this, "Song Wunsch abgegeben!: $name, $song, $artist", Toast.LENGTH_SHORT).show()
+            Toast.makeText(
+                this,
+                "Song Wunsch abgegeben!: $name, $song, $artist",
+                Toast.LENGTH_SHORT
+            ).show()
             // Handle the song wish as needed
+
+
+        }
+
+        val goBackButton = findViewById<Button>(R.id.goBackButton)
+        goBackButton.setOnClickListener {
+            finish()
         }
     }
 }

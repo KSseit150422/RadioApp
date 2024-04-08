@@ -20,6 +20,13 @@ class RateHostActivity : ComponentActivity() {
             val rating = ratingBar.rating
             Toast.makeText(this, "Bewertung abgegeben!: $rating", Toast.LENGTH_SHORT).show()
             // Handle the rating as needed
+
+
+        }
+        val goBackButton = findViewById<Button>(R.id.goBackButton)
+        goBackButton.setOnClickListener {
+            finish()
+
         }
     }
 }
