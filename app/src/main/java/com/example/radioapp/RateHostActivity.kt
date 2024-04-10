@@ -19,14 +19,15 @@ class RateHostActivity : ComponentActivity() {
         submitButton.setOnClickListener {
             val rating = ratingBar.rating
             Toast.makeText(this, "Bewertung abgegeben!: $rating", Toast.LENGTH_SHORT).show()
-            // Handle the rating as needed
 
-
+            // Create an instance of DatabaseStub
+            val dbStub = DatabaseStub()
+            // Store the rating using the stub
+            dbStub.storeHostRating(rating)
         }
         val goBackButton = findViewById<Button>(R.id.goBackButton)
         goBackButton.setOnClickListener {
             finish()
-
         }
     }
 }

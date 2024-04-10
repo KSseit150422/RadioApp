@@ -11,6 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.IU.radioapp.R
 import com.example.radioapp.ui.theme.RadioAppTheme
+import android.widget.RatingBar
 
 class RatePlaylistActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,6 +32,18 @@ class RatePlaylistActivity : ComponentActivity() {
 
             // Finish the current activity
             finish()
+            // Find the RatingBar widget by its ID
+            val ratingBar = findViewById<RatingBar>(R.id.ratingBar)
+
+            // Get the current rating value from the RatingBar
+            val rating = ratingBar.rating.toInt()
+
+            // Create an instance of DatabaseStub
+            val dbStub = DatabaseStub()
+
+            // Call the ratePlaylist method with the rating value
+            dbStub.ratePlaylist(rating)
+
         }
 
         val goBackButton = findViewById<Button>(R.id.goBackButton)

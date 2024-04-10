@@ -27,7 +27,11 @@ class SongWishActivity : ComponentActivity() {
                 "Song Wunsch abgegeben!: $name, $song, $artist",
                 Toast.LENGTH_SHORT
             ).show()
-            // Handle the song wish as needed
+
+            // Create an instance of DatabaseStub
+            val dbStub = DatabaseStub()
+            // Store the song wish using the stub
+            dbStub.submitSongWish(name, song, artist)
 
 
         }
