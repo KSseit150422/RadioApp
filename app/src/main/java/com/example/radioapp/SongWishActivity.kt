@@ -17,6 +17,11 @@ class SongWishActivity : ComponentActivity() {
         val artistInput = findViewById<EditText>(R.id.artistInput)
         val submitButton = findViewById<Button>(R.id.submitWishButton)
 
+        // Create an instance of DatabaseStub
+        val dbStub = DatabaseStub()
+        // read the song wishes using the stub
+        dbStub.readSongWishes()
+
         submitButton.setOnClickListener {
             val name = nameInput.text.toString()
             val song = songInput.text.toString()
@@ -28,8 +33,6 @@ class SongWishActivity : ComponentActivity() {
                 Toast.LENGTH_SHORT
             ).show()
 
-            // Create an instance of DatabaseStub
-            val dbStub = DatabaseStub()
             // Store the song wish using the stub
             dbStub.submitSongWish(name, song, artist)
 

@@ -24,6 +24,8 @@ class RateHostActivity : ComponentActivity() {
             val dbStub = DatabaseStub()
             // Store the rating using the stub
             dbStub.storeHostRating(rating)
+            // Rate the moderator using the stub
+            dbStub.rateModerator(rating.toInt())
         }
         val goBackButton = findViewById<Button>(R.id.goBackButton)
         goBackButton.setOnClickListener {
