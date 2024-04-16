@@ -1,1 +1,2 @@
-/build
+appInsightsSettings.xml/build
+**/google-services.json
